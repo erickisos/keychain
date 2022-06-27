@@ -1,0 +1,3 @@
+#+title: Keychain Telegram Bot
+
+This is a simple telegram bot that would help you to keep your physical passwords (this means, bank pins, and some other combinations that you would thing as useful) stored in just one place.
