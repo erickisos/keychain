@@ -14,7 +14,7 @@ black = {version = "^22.6.0", allow-prereleases = true}
 mypy = "^0.961"
 pytest = "^7.1.2"
 flake8 = "^4.0.1"
-tox = "^3.25.0"
+tox = "^3.25.1"
 pre-commit = "^2.19.0"
 isort = "^5.10.1"
 hypothesis = "^6.49.1"
