@@ -160,7 +160,7 @@ pyflakes = ">=2.4.0,<2.5.0"
 
 [[package]]
 name = "hypothesis"
-version = "6.52.1"
+version = "6.53.0"
 description = "A library for property-based testing"
 category = "dev"
 optional = false
@@ -172,7 +172,7 @@ exceptiongroup = {version = ">=1.0.0rc8", markers = "python_version < \"3.11\""}
 sortedcontainers = ">=2.1.0,<3.0.0"
 
 [package.extras]
-all = ["black (>=19.10b0)", "click (>=7.0)", "django (>=2.2)", "dpcontracts (>=0.4)", "lark-parser (>=0.6.5)", "libcst (>=0.3.16)", "numpy (>=1.9.0)", "pandas (>=0.25)", "pytest (>=4.6)", "python-dateutil (>=1.4)", "pytz (>=2014.1)", "redis (>=3.0.0)", "rich (>=9.0.0)", "importlib-metadata (>=3.6)", "backports.zoneinfo (>=0.2.1)", "tzdata (>=2022.1)"]
+all = ["black (>=19.10b0)", "click (>=7.0)", "django (>=2.2)", "dpcontracts (>=0.4)", "lark-parser (>=0.6.5)", "libcst (>=0.3.16)", "numpy (>=1.9.0)", "pandas (>=1.0)", "pytest (>=4.6)", "python-dateutil (>=1.4)", "pytz (>=2014.1)", "redis (>=3.0.0)", "rich (>=9.0.0)", "importlib-metadata (>=3.6)", "backports.zoneinfo (>=0.2.1)", "tzdata (>=2022.1)"]
 cli = ["click (>=7.0)", "black (>=19.10b0)", "rich (>=9.0.0)"]
 codemods = ["libcst (>=0.3.16)"]
 dateutil = ["python-dateutil (>=1.4)"]
@@ -181,7 +181,7 @@ dpcontracts = ["dpcontracts (>=0.4)"]
 ghostwriter = ["black (>=19.10b0)"]
 lark = ["lark-parser (>=0.6.5)"]
 numpy = ["numpy (>=1.9.0)"]
-pandas = ["pandas (>=0.25)"]
+pandas = ["pandas (>=1.0)"]
 pytest = ["pytest (>=4.6)"]
 pytz = ["pytz (>=2014.1)"]
 redis = ["redis (>=3.0.0)"]
@@ -310,8 +310,8 @@ optional = false
 python-versions = ">=3.6"
 
 [package.extras]
-dev = ["pre-commit", "tox"]
-testing = ["pytest", "pytest-benchmark"]
+testing = ["pytest-benchmark", "pytest"]
+dev = ["tox", "pre-commit"]
 
 [[package]]
 name = "pre-commit"
@@ -413,7 +413,7 @@ coverage = {version = ">=5.2.1", extras = ["toml"]}
 pytest = ">=4.6"
 
 [package.extras]
-testing = ["fields", "hunter", "process-tests", "six", "pytest-xdist", "virtualenv"]
+testing = ["virtualenv", "pytest-xdist", "six", "process-tests", "hunter", "fields"]
 
 [[package]]
 name = "pyyaml"
@@ -537,7 +537,7 @@ testing = ["coverage (>=4)", "coverage-enable-subprocess (>=1)", "flaky (>=3)", 
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "9084d9aca78a36c04bca661e0d4600e8be9538233dfc776cc4d8d5698b057f29"
+content-hash = "fa4acba8134ec34ec906fb750225691f04b832bfc9cee7c8822674222248a9dd"
 
 [metadata.files]
 atomicwrites = [
@@ -658,8 +658,8 @@ flake8 = [
     {file = "flake8-4.0.1.tar.gz", hash = "sha256:806e034dda44114815e23c16ef92f95c91e4c71100ff52813adf7132a6ad870d"},
 ]
 hypothesis = [
-    {file = "hypothesis-6.52.1-py3-none-any.whl", hash = "sha256:a9b1707971a65d60fd71c682e5f97a05ce20844c2387c396d7a56d537f2b7ec1"},
-    {file = "hypothesis-6.52.1.tar.gz", hash = "sha256:72e759101fd994afd68c52122849109b931bed8f4f85a1576a5feee7ad10b150"},
+    {file = "hypothesis-6.53.0-py3-none-any.whl", hash = "sha256:9c2b073731010cc00bcf060e71bd8f9507f6fe8f6d173f454634d1b91c537412"},
+    {file = "hypothesis-6.53.0.tar.gz", hash = "sha256:39f225530c28fe484a59c39839c8a2fb414f2ecfd4743f75d82f55e0f09268c0"},
 ]
 identify = [
     {file = "identify-2.5.1-py2.py3-none-any.whl", hash = "sha256:0dca2ea3e4381c435ef9c33ba100a78a9b40c0bab11189c7cf121f75815efeaa"},
