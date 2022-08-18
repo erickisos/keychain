@@ -17,7 +17,7 @@ flake8 = "^5.0.4"
 tox = "^3.25.1"
 pre-commit = "^2.20.0"
 isort = "^5.10.1"
-hypothesis = "^6.54.1"
+hypothesis = "^6.54.3"
 pytest-cov = "^3.0.0"
 codecov = "^2.1.12"
 
