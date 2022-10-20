@@ -55,4 +55,4 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
         run: poetry install
       - name: Unit & Coverage test
-        run: poetry run tox
+        run: poetry run pytest && poetry run codecov
