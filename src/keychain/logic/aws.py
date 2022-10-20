@@ -1,6 +1,6 @@
+import json
 from typing import Any
 
-import json
 from ..contracts.outputs.aws import LambdaApiResponse
 
 
