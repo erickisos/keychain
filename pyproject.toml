@@ -4,6 +4,9 @@ version = "0.1.0"
 description = "A quick storage for all your passwords"
 authors = ["Erick Isos <erickisos653@gmail.com>"]
 license = "GPLv3"
+packages = [
+    { include = "keychain", from = "src" },
+]
 
 [tool.poetry.dependencies]
 python = "^3.9"
