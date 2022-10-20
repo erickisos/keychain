@@ -1,6 +1,6 @@
 from typing import Text, TypedDict
 
 
-class LambdaResponse(TypedDict):
+class LambdaApiResponse(TypedDict):
     statusCode: int
     body: Text
