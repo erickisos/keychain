@@ -1,20 +1,14 @@
 from unittest.mock import patch
-from pytest import fixture
 
-from keychain.ports.http_inputs import webhook
+from hypothesis import given
+from hypothesis.strategies import from_type
+
 from keychain.contracts.inputs.aws import LambdaApiEvent
-
-
-@fixture
-def event() -> LambdaApiEvent:
-    # TODO: Replace this with a random generator
-    return LambdaApiEvent(
-        headers={},
-        body='{}',
-    )
+from keychain.ports.http_inputs import webhook
 
 
 @patch('builtins.print', autospec=True)
+@given(from_type(LambdaApiEvent))
 def test_webhook(mocked_print, event: LambdaApiEvent):
     """Test that no matter which event we receive, the answer is the same"""
     assert {
