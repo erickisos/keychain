@@ -1,0 +1,27 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  Keychain Bot Main API definition
+Globals:
+  Api:
+    TracingEnabled: True
+
+Resources:
+  MainApi:
+    Type: AWS::Serverless::Api
+    Properties:
+      StageName: v1
+  WebhookFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Description: Main entry point for the Telegram messages
+      Runtime: python3.9
+      CodeUri: src/
+      Handler: keychain.ports.http_inputs.webhook
+      Events:
+        NewWebhook:
+          Type: Api
+          Properties:
+            Path: /webhook
+            Method: POST
+            RestApiId: !Ref MainApi
