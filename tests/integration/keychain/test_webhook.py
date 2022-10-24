@@ -16,6 +16,6 @@ def test_webhook(mocked_print, event: LambdaApiEvent):
     assert {
         'statusCode': 200,
         'body': '{"message": "Hello, World!"}',
-    } == webhook(event, None)
+    } == webhook(event)
 
     assert mocked_print.called
