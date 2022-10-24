@@ -1,6 +1,7 @@
 from datetime import datetime
-from typing import Literal, Optional, Text, TypedDict
+from typing import Literal, Optional, Text
 from xmlrpc.client import Boolean
+
 from pydantic import Field
 from pydantic.dataclasses import dataclass
 
