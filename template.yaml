@@ -11,13 +11,21 @@ Resources:
     Type: AWS::Serverless::Api
     Properties:
       StageName: v1
+  KeychainLayer:
+    Type: AWS::Serverless::LayerVersion
+    Properties:
+      ContentUri: dist/
+      CompatibleRuntimes:
+        - python3.9
   WebhookFunction:
     Type: AWS::Serverless::Function
     Properties:
       Description: Main entry point for the Telegram messages
       Runtime: python3.9
-      CodeUri: src/
-      Handler: keychain.ports.http_inputs.webhook
+      CodeUri: handlers/
+      Handler: service.webhook_handler
+      Layers:
+        - !Ref KeychainLayer
       Events:
         NewWebhook:
           Type: Api
