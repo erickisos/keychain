@@ -2,7 +2,6 @@ from datetime import datetime
 from typing import Literal, Optional, Text
 from xmlrpc.client import Boolean
 
-from pydantic import Field
 from pydantic.dataclasses import dataclass
 
 ChatType = Literal['private', 'group', 'supergroup', 'channel']
@@ -10,18 +9,18 @@ ChatType = Literal['private', 'group', 'supergroup', 'channel']
 
 @dataclass
 class User:
-    is_bot: Boolean
+    user_id: int  # id
     first_name: Text
     last_name: Optional[Text]
     username: Optional[Text]
-    user_id: int = Field(alias='id')
+    is_bot: Boolean
 
 
 @dataclass
 class Chat:
+    chat_id: int  # id
     title: Optional[Text]
-    chat_id: int = Field(alias='id')
-    chat_type: ChatType = Field(alias='type')
+    chat_type: ChatType  # type
 
 
 @dataclass
@@ -30,7 +29,7 @@ class Message:
     text: Text
     chat: Chat
     date: datetime
-    from_user: User = Field(alias='from')
+    from_user: User  # from
 
 
 @dataclass
