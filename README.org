@@ -1,17 +1,30 @@
 #+title: Keychain Telegram Bot
 
+#+begin_quote
+For now, this project is still in development, but in the future is expected that you would be able to just clone it and deploy it on your own aws account.
+#+end_quote
+
+
 This is a simple telegram bot that would help you to keep your physical passwords (this means, bank pins, and some other combinations that you would thing as useful) stored in just one place.
 
-* Development
+** Development
 
 The next steps will help you to generate the main layer directory
 
-- =mkdir -p dist/python/=
-- =poetry export -o requirements.txt=
-- =pip install . -t dist/python/=
+- src_sh{mkdir -p dist/python/}
+- src_sh{poetry export -o requirements.txt}
+- src_sh{pip install . -t dist/python/}
 
 Once that you have the layer generated, you can test it locally by running
 
 #+begin_src shell
 sam local start-api
 #+end_src
+
+** Deployment
+
+TBD
+
+** Contribution Guidelines
+
+TBD
