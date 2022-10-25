@@ -3,7 +3,7 @@ from unittest.mock import patch
 from hypothesis import given
 
 from keychain.contracts.inputs.aws import LambdaApiEvent
-from keychain.models.telegram import Update
+from keychain.contracts.inputs.telegram import Update
 from keychain.ports.http_inputs import webhook
 
 from ..aux.strategies import event_with_json_body
@@ -16,6 +16,6 @@ def test_webhook(mocked_print, event: LambdaApiEvent):
     assert {
         'statusCode': 200,
         'body': '{"message": "Hello, World!"}',
-    } == webhook(event)
+    } == webhook(event, {})
 
     assert mocked_print.called

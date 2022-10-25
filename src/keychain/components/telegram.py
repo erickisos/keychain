@@ -1,6 +1,6 @@
 import json
 from dataclasses import dataclass
-from typing import Any, Text
+from typing import Text
 from urllib.request import urlopen
 
 from ..contracts.outputs.telegram import Message
@@ -12,8 +12,7 @@ class Bot(metaclass=Singleton):
     token: Text
     base_url: Text = 'https://api.telegram.org/bot{token}/{action}'
 
-    def send_message(self, message: Message) -> Any:
+    def send_message(self, message: Message) -> Message:
         url = self.base_url.format(token=self.token, action='sendMessage')
-
         with urlopen(url, data=json.dumps(message).encode()) as response:
             return json.loads(response.read().decode())

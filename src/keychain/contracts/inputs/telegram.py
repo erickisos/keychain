@@ -1,6 +1,5 @@
 from datetime import datetime
 from typing import Literal, Optional, Text
-from xmlrpc.client import Boolean
 
 from pydantic.dataclasses import dataclass
 
@@ -13,7 +12,7 @@ class User:
     first_name: Text
     last_name: Optional[Text]
     username: Optional[Text]
-    is_bot: Boolean
+    is_bot: bool
 
 
 @dataclass

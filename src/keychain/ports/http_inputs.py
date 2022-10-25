@@ -1,8 +1,9 @@
-from ..contracts.inputs.aws import LambdaApiEvent
-from ..contracts.outputs.aws import LambdaApiResponse
-from ..logic.aws import to_json
+from ..adapters.messages import update_to_internal
+from ..contracts.inputs.telegram import Update
+from ..controllers.messages import send
+from ..models.components import Components
 
 
-def webhook(event: LambdaApiEvent) -> LambdaApiResponse:
-    print(event)
-    return to_json({'message': 'Hello, World!'}, 200)
+def webhook(event: Update, components: Components):
+    message = update_to_internal(event)
+    return send(message, components)
