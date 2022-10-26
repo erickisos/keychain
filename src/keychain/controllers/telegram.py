@@ -1,5 +1,6 @@
 from typing import Optional
-from ..models.telegram import Update, Message
+
+from ..models.telegram import Message, Update
 
 
 def send_message(update: Update, components) -> Optional[Message]:
