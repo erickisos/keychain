@@ -1,10 +1,10 @@
-from keychain.adapters.messages import wire_to_internal, internal_to_wire
-from hypothesis.strategies import from_type
 from hypothesis import given
-
-from keychain.models.messages import Message
-from keychain.contracts.inputs.telegram import Message as InMessage
+from hypothesis.strategies import from_type
 from pytest import raises
+
+from keychain.adapters.messages import internal_to_wire, wire_to_internal
+from keychain.contracts.inputs.telegram import Message as InMessage
+from keychain.models.messages import Message
 
 
 @given(from_type(InMessage))
