@@ -1,5 +1,5 @@
 from datetime import datetime
-from typing import Literal, Text, TypedDict
+from typing import Literal, TypedDict
 
 ChatType = Literal['private', 'group', 'supergroup', 'channel']
 
@@ -25,7 +25,7 @@ Message = TypedDict(
     'Message',
     {
         'message_id': int,
-        'text': Text,
+        'text': str,
         'chat': Chat,
         'date': datetime,
         'from': User,
