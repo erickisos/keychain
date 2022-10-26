@@ -2,11 +2,17 @@ from unittest.mock import patch
 
 from hypothesis import given
 
+from keychain.components.telegram import Bot
 from keychain.contracts.inputs.aws import LambdaApiEvent
-from keychain.models.telegram import Update
+from keychain.contracts.inputs.telegram import Update
+from keychain.models.components import Components
 from keychain.ports.http_inputs import webhook
 
 from ..aux.strategies import event_with_json_body
+
+mock_components: Components = {
+    'telegram-bot': Bot('dummy_token', 'https://dumyurl/{token}/{action}')
+}
 
 
 @patch('builtins.print', autospec=True)
@@ -16,6 +22,6 @@ def test_webhook(mocked_print, event: LambdaApiEvent):
     assert {
         'statusCode': 200,
         'body': '{"message": "Hello, World!"}',
-    } == webhook(event)
+    } == webhook(event, mock_components)
 
     assert mocked_print.called
