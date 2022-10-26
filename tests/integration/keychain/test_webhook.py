@@ -3,7 +3,7 @@ from unittest.mock import patch
 from hypothesis import given
 
 from keychain.contracts.inputs.aws import LambdaApiEvent
-from keychain.models.telegram import Update
+from keychain.contracts.inputs.telegram import Update
 from keychain.ports.http_inputs import webhook
 
 from ..aux.strategies import event_with_json_body
