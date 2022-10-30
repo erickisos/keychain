@@ -1,5 +1,4 @@
 import json
-import traceback
 from unittest.mock import patch
 
 from hypothesis import given
@@ -10,6 +9,7 @@ from keychain.contracts.inputs.aws import LambdaApiEvent
 from keychain.contracts.inputs.telegram import Update
 from keychain.models.components import Components
 from keychain.ports.http_inputs import webhook
+
 from ..aux.strategies import event_with_json_body
 
 mock_components: Components = {
@@ -30,17 +30,18 @@ def test_webhook(event: LambdaApiEvent):
             update.get('update_id') != ''
             and update.get('update_id') is not None
             and message
-            and message['chat'].get('id') != ''
-            and message['chat'].get('id') is not None
-            and message['from'].get('id') != ''
-            and message['from'].get('id') is not None
+            and message['chat'].get('id') not in ('', None)
+            and message['from'].get('id') not in ('', None)
             and message['text'] != ''
         ):
-            # TODO: Check unicode input (\x1f vs \\u001f)
             assert {
                 'statusCode': 200,
-                'body': '{"chat_id": "%s", "text": "%s"}'
-                % (message['chat']['id'], message['text']),
+                'body': json.dumps(
+                    {
+                        'chat_id': f"{message['chat']['id']}",
+                        'text': message['text'],
+                    }
+                ),
             } == webhook(event, mock_components)
             assert mock_send_message.call_count == 1
         else:
