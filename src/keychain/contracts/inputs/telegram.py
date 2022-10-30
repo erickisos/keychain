@@ -1,5 +1,5 @@
 from datetime import datetime
-from typing import Literal, TypedDict
+from typing import Literal, Optional, TypedDict
 
 ChatType = Literal['private', 'group', 'supergroup', 'channel']
 
@@ -35,6 +35,10 @@ Message = TypedDict(
 
 Update = TypedDict(
     'Update',
-    {'update_id': int, 'message': Message, 'edited_message': Message},
+    {
+        'update_id': int,
+        'message': Optional[Message],
+        'edited_message': Optional[Message],
+    },
     total=False,
 )

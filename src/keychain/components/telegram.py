@@ -1,19 +1,18 @@
 import json
 from dataclasses import dataclass
-from typing import Any, Text
 from urllib.request import urlopen
 
-from ..contracts.outputs.telegram import Message
+from ..contracts.inputs.telegram import Message as InMessage
+from ..contracts.outputs.telegram import Message as OutMessage
 from . import Singleton
 
 
 @dataclass
 class Bot(metaclass=Singleton):
-    token: Text
-    base_url: Text = 'https://api.telegram.org/bot{token}/{action}'
+    token: str
+    base_url: str = 'https://api.telegram.org/bot{token}/{action}'
 
-    def send_message(self, message: Message) -> Any:
+    def send_message(self, message: OutMessage) -> InMessage:
         url = self.base_url.format(token=self.token, action='sendMessage')
-
         with urlopen(url, data=json.dumps(message).encode()) as response:
             return json.loads(response.read().decode())
