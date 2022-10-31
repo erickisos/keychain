@@ -34,7 +34,6 @@ jobs:
       - name: Create layer directory
         run: mkdir -p dist/python/
       - name: Install dependencies
-        if: steps.cache.outputs.cache-hit != 'true'
         run: pip install . -t dist/python/
       - run: sam build --use-container
       - run: |
