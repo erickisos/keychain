@@ -44,5 +44,5 @@ jobs:
                      --s3-bucket ${{ secrets.AWS_SAM_BUCKET }} \
                      --s3-prefix KeychainAPI \
                      --capabilities CAPABILITY_IAM \
-                     --region us-east-1
+                     --region us-east-1 \
                      --parameter-overrides "TelegramBotToken=${{ secrets.BOT_TOKEN }} SecretToken=${{ secrets.API_TOKEN }}"
