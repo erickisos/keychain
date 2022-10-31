@@ -2,9 +2,23 @@ AWSTemplateFormatVersion: "2010-09-09"
 Transform: AWS::Serverless-2016-10-31
 Description: >
   Keychain Bot Main API definition
+
+Parameters:
+  TelegramBotToken:
+    Type: String
+    Description: Token that will be used to communicate with the Telegram API.
+  SecretToken:
+    Type: String
+    Description: Token to check if the request comes from a valid source.
+
 Globals:
   Api:
     TracingEnabled: True
+  Function:
+    Environment:
+      Variables:
+        TELEGRAM_BOT_TOKEN: !Ref TelegramBotToken
+        SECRET_TOKEN: !Ref SecretToken
 
 Resources:
   MainApi:
