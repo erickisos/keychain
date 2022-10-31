@@ -14,7 +14,6 @@ class Bot(metaclass=Singleton):
 
     def send_message(self, message: OutMessage) -> InMessage:
         url = self.base_url.format(token=self.token, action='sendMessage')
-        print(url)
         response = requests.post(url, json=message)
-        print(response)
-        return response.json()
+        print(response.json())
+        return response.json()['body']
