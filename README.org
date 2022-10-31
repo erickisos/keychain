@@ -11,9 +11,9 @@ This is a simple telegram bot that would help you to keep your physical password
 
 The next steps will help you to generate the main layer directory
 
-- src_sh{mkdir -p dist/python/}
-- src_sh{poetry export -o requirements.txt}
-- src_sh{pip install . -t dist/python/}
+- =mkdir -p dist/python/=
+- =poetry export -o requirements.txt=
+- =pip install . -t dist/python/=
 
 Once that you have the layer generated, you can test it locally by running
 
