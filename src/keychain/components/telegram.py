@@ -1,6 +1,6 @@
-import json
 from dataclasses import dataclass
-from urllib.request import urlopen
+
+import requests
 
 from ..contracts.inputs.telegram import Message as InMessage
 from ..contracts.outputs.telegram import Message as OutMessage
@@ -14,5 +14,7 @@ class Bot(metaclass=Singleton):
 
     def send_message(self, message: OutMessage) -> InMessage:
         url = self.base_url.format(token=self.token, action='sendMessage')
-        with urlopen(url, data=json.dumps(message).encode()) as response:
-            return json.loads(response.read().decode())
+        print(url)
+        response = requests.post(url, json=message)
+        print(response)
+        return response.json()
