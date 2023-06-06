@@ -33,7 +33,7 @@ def test_webhook(mock_req, event: LambdaApiEvent):
         and message['from'].get('id') not in ('', None)
         and message['text'] != ''
     ):
-        assert {
+        expected = {
             'statusCode': 200,
             'body': json.dumps(
                 {
@@ -41,7 +41,9 @@ def test_webhook(mock_req, event: LambdaApiEvent):
                     'text': message['text'],
                 }
             ),
-        } == webhook(event, mock_config)
+        }
+        actual = webhook(event, mock_config)
+        assert expected == actual
     else:
         with raises(Exception):
             webhook(event, mock_config)
