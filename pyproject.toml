@@ -10,7 +10,7 @@ packages = [
 
 [tool.poetry.dependencies]
 python = "^3.9"
-pydantic = {extras = ["dataclasses"], version = "^1.10.7"}
+pydantic = {extras = ["dataclasses"], version = "^2.0.2"}
 requests = "^2.30.0"
 aws-xray-sdk = "^2.11.0"
 
