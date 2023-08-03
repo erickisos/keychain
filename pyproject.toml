@@ -18,7 +18,7 @@ aws-xray-sdk = "^2.11.0"
 black = {version = "^23.7.0", allow-prereleases = true}
 mypy = "^1.4"
 pytest = "^7.2.2"
-flake8 = "^6.0.0"
+flake8 = "^6.1.0"
 pre-commit = "^3.3.2"
 isort = "^5.12.0"
 hypothesis = "^6.81.2"
