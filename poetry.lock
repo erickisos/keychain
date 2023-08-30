@@ -379,13 +379,13 @@ pyflakes = ">=3.1.0,<3.2.0"
 
 [[package]]
 name = "hypothesis"
-version = "6.82.4"
+version = "6.82.7"
 description = "A library for property-based testing"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "hypothesis-6.82.4-py3-none-any.whl", hash = "sha256:3f1e730ea678d01ad2183325b1350faa6b097b98ced1e97e0ba67bcf5e2439ea"},
-    {file = "hypothesis-6.82.4.tar.gz", hash = "sha256:11f32a66cf361a72f2a36527a15639ea6814d1dbf54782c3a8ea31585d62ab27"},
+    {file = "hypothesis-6.82.7-py3-none-any.whl", hash = "sha256:7950944b4a8b7610ab32d077a05e48bec30ecee7385e4d75eedd8120974b199e"},
+    {file = "hypothesis-6.82.7.tar.gz", hash = "sha256:06069ff2f18b530a253c0b853b9fae299369cf8f025b3ad3b86ee7131ecd3207"},
 ]
 
 [package.dependencies]
@@ -1135,4 +1135,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "9b4d4a233150392f93a0d1e75c08bf4d12bcbe8d5e641838b4a149770ddcab25"
+content-hash = "eb12b32f8af5cb530582aee9a955838bff1fba6a08b7d23de5183f4e8b5a6b5d"
