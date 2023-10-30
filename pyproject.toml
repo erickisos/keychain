@@ -15,7 +15,7 @@ requests = "^2.31.0"
 aws-xray-sdk = "^2.11.0"
 
 [tool.poetry.group.dev.dependencies]
-black = {version = "^23.9.1", allow-prereleases = true}
+black = {version = "^23.10.1", allow-prereleases = true}
 mypy = "^1.6"
 pytest = "^7.4.2"
 flake8 = "^6.1.0"
