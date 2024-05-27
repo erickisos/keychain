@@ -31,13 +31,13 @@ tests-no-zope = ["cloudpickle", "hypothesis", "mypy (>=1.1.1)", "pympler", "pyte
 
 [[package]]
 name = "aws-xray-sdk"
-version = "2.12.1"
+version = "2.13.1"
 description = "The AWS X-Ray SDK for Python (the SDK) enables Python developers to record and emit information from within their applications to the AWS X-Ray service."
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "aws-xray-sdk-2.12.1.tar.gz", hash = "sha256:0bbfdbc773cfef4061062ac940b85e408297a2242f120bcdfee2593209b1e432"},
-    {file = "aws_xray_sdk-2.12.1-py2.py3-none-any.whl", hash = "sha256:f6803832dc08d18cc265e2327a69bfa9ee41c121fac195edc9745d04b7a566c3"},
+    {file = "aws-xray-sdk-2.13.1.tar.gz", hash = "sha256:911d634c23e0693f585c4cab08d43ab5177f872de416fdc8dd0fe3b170b52835"},
+    {file = "aws_xray_sdk-2.13.1-py2.py3-none-any.whl", hash = "sha256:3da9d3b3d63c62f7745b987d80a157a30f4a0cd1db7e340b8f40f4d6aab30e12"},
 ]
 
 [package.dependencies]
@@ -1109,4 +1109,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "b3e0d7b320c86ff7a07d9b758bcda15de1452268eae2123ad1cc17c01002d731"
+content-hash = "072475a2fe30fcc70055950d044d56ce69df694d59ad18ec073eb0f8419912d9"
