@@ -379,13 +379,13 @@ pyflakes = ">=3.2.0,<3.3.0"
 
 [[package]]
 name = "hypothesis"
-version = "6.92.1"
+version = "6.111.2"
 description = "A library for property-based testing"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "hypothesis-6.92.1-py3-none-any.whl", hash = "sha256:3cba76a7389bd7245c350fcf7234663314dc81a5be0bbef72a07d8c249bfc210"},
-    {file = "hypothesis-6.92.1.tar.gz", hash = "sha256:fa755ded526e50b7e2f642cdc5d64519f88d4e4ee71d9d29ec3eb2f2fddf1274"},
+    {file = "hypothesis-6.111.2-py3-none-any.whl", hash = "sha256:055e8228958e22178d6077e455fd86a72044d02dac130dbf9c8b31e161b9809c"},
+    {file = "hypothesis-6.111.2.tar.gz", hash = "sha256:0496ad28c7240ee9ba89fcc7fb1dc74e89f3e40fbcbbb5f73c0091558dec8e6e"},
 ]
 
 [package.dependencies]
@@ -394,9 +394,10 @@ exceptiongroup = {version = ">=1.0.0", markers = "python_version < \"3.11\""}
 sortedcontainers = ">=2.1.0,<3.0.0"
 
 [package.extras]
-all = ["backports.zoneinfo (>=0.2.1)", "black (>=19.10b0)", "click (>=7.0)", "django (>=3.2)", "dpcontracts (>=0.4)", "lark (>=0.10.1)", "libcst (>=0.3.16)", "numpy (>=1.17.3)", "pandas (>=1.1)", "pytest (>=4.6)", "python-dateutil (>=1.4)", "pytz (>=2014.1)", "redis (>=3.0.0)", "rich (>=9.0.0)", "tzdata (>=2023.3)"]
+all = ["backports.zoneinfo (>=0.2.1)", "black (>=19.10b0)", "click (>=7.0)", "crosshair-tool (>=0.0.70)", "django (>=3.2)", "dpcontracts (>=0.4)", "hypothesis-crosshair (>=0.0.13)", "lark (>=0.10.1)", "libcst (>=0.3.16)", "numpy (>=1.17.3)", "pandas (>=1.1)", "pytest (>=4.6)", "python-dateutil (>=1.4)", "pytz (>=2014.1)", "redis (>=3.0.0)", "rich (>=9.0.0)", "tzdata (>=2024.1)"]
 cli = ["black (>=19.10b0)", "click (>=7.0)", "rich (>=9.0.0)"]
 codemods = ["libcst (>=0.3.16)"]
+crosshair = ["crosshair-tool (>=0.0.70)", "hypothesis-crosshair (>=0.0.13)"]
 dateutil = ["python-dateutil (>=1.4)"]
 django = ["django (>=3.2)"]
 dpcontracts = ["dpcontracts (>=0.4)"]
@@ -407,7 +408,7 @@ pandas = ["pandas (>=1.1)"]
 pytest = ["pytest (>=4.6)"]
 pytz = ["pytz (>=2014.1)"]
 redis = ["redis (>=3.0.0)"]
-zoneinfo = ["backports.zoneinfo (>=0.2.1)", "tzdata (>=2023.3)"]
+zoneinfo = ["backports.zoneinfo (>=0.2.1)", "tzdata (>=2024.1)"]
 
 [[package]]
 name = "identify"
@@ -1116,4 +1117,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "14d78b5f2f8eb8c758345448db97a51db70ff39d1f0432b8e99c2badfca1e9db"
+content-hash = "cf65655041ac58aa1de2f9179d54a2a24e501c3cc59dbab16f4fdb676addb0a1"
