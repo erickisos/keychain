@@ -379,13 +379,13 @@ pyflakes = ">=3.2.0,<3.3.0"
 
 [[package]]
 name = "hypothesis"
-version = "6.112.0"
+version = "6.112.4"
 description = "A library for property-based testing"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "hypothesis-6.112.0-py3-none-any.whl", hash = "sha256:1e6adbd9534c0d691690b5006904327ea37c851d4e15262a22094aa77879e84d"},
-    {file = "hypothesis-6.112.0.tar.gz", hash = "sha256:06ea8857e1e711a1a6f24154a3c8c4eab04b041993206aaa267f98b859fd6ef5"},
+    {file = "hypothesis-6.112.4-py3-none-any.whl", hash = "sha256:6d3e3038968925069d1a7e7ebfa2ed0b65b22eff6800d1e88b687b3c6d2f57b5"},
+    {file = "hypothesis-6.112.4.tar.gz", hash = "sha256:8fe64e4a6d0862e209e3c36b42037aee9665cb839d619d9281be45345ab7d856"},
 ]
 
 [package.dependencies]
@@ -394,10 +394,10 @@ exceptiongroup = {version = ">=1.0.0", markers = "python_version < \"3.11\""}
 sortedcontainers = ">=2.1.0,<3.0.0"
 
 [package.extras]
-all = ["backports.zoneinfo (>=0.2.1)", "black (>=19.10b0)", "click (>=7.0)", "crosshair-tool (>=0.0.70)", "django (>=3.2)", "dpcontracts (>=0.4)", "hypothesis-crosshair (>=0.0.13)", "lark (>=0.10.1)", "libcst (>=0.3.16)", "numpy (>=1.17.3)", "pandas (>=1.1)", "pytest (>=4.6)", "python-dateutil (>=1.4)", "pytz (>=2014.1)", "redis (>=3.0.0)", "rich (>=9.0.0)", "tzdata (>=2024.1)"]
+all = ["backports.zoneinfo (>=0.2.1)", "black (>=19.10b0)", "click (>=7.0)", "crosshair-tool (>=0.0.73)", "django (>=3.2)", "dpcontracts (>=0.4)", "hypothesis-crosshair (>=0.0.14)", "lark (>=0.10.1)", "libcst (>=0.3.16)", "numpy (>=1.17.3)", "pandas (>=1.1)", "pytest (>=4.6)", "python-dateutil (>=1.4)", "pytz (>=2014.1)", "redis (>=3.0.0)", "rich (>=9.0.0)", "tzdata (>=2024.2)"]
 cli = ["black (>=19.10b0)", "click (>=7.0)", "rich (>=9.0.0)"]
 codemods = ["libcst (>=0.3.16)"]
-crosshair = ["crosshair-tool (>=0.0.70)", "hypothesis-crosshair (>=0.0.13)"]
+crosshair = ["crosshair-tool (>=0.0.73)", "hypothesis-crosshair (>=0.0.14)"]
 dateutil = ["python-dateutil (>=1.4)"]
 django = ["django (>=3.2)"]
 dpcontracts = ["dpcontracts (>=0.4)"]
@@ -408,7 +408,7 @@ pandas = ["pandas (>=1.1)"]
 pytest = ["pytest (>=4.6)"]
 pytz = ["pytz (>=2014.1)"]
 redis = ["redis (>=3.0.0)"]
-zoneinfo = ["backports.zoneinfo (>=0.2.1)", "tzdata (>=2024.1)"]
+zoneinfo = ["backports.zoneinfo (>=0.2.1)", "tzdata (>=2024.2)"]
 
 [[package]]
 name = "identify"
@@ -1117,4 +1117,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "5b2cc0c9d25e44ca8a3a8410d6b0a269d9d0b5dd680b4c06f7deaae2ed1abd47"
+content-hash = "0df11cf6600251e83bb25cff8785dc33c651f32427195f6b02e69ac69fa83cae"
