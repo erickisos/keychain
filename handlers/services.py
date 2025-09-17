@@ -1,7 +1,7 @@
 """This module includes all the handlers for http requests."""
 import os
 
-from aws_xray_sdk.core import patch_all, xray_recorder
+from aws_xray_sdk.core import patch_all
 
 from keychain.contracts.inputs.aws import LambdaApiEvent
 from keychain.contracts.outputs.aws import LambdaApiResponse

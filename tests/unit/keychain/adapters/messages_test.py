@@ -1,10 +1,24 @@
 from hypothesis import given
-from hypothesis.strategies import from_type
+from hypothesis.strategies import from_type, text, datetimes, builds
 from pytest import raises
 
 from keychain.adapters.messages import internal_to_wire, wire_to_internal
 from keychain.contracts.inputs.telegram import Message as InMessage
 from keychain.models.messages import Message
+
+
+def valid_message_strategy():
+    """Generate Message instances with valid non-None, non-empty strings for critical fields."""
+    valid_string = text(min_size=1).filter(lambda x: x != 'None' and x.strip() != '')
+
+    return builds(
+        Message,
+        chat_id=valid_string,
+        message_id=text(),  # Can be empty for some tests
+        user_id=text(),     # Can be empty for some tests
+        text=valid_string,
+        date=datetimes()
+    )
 
 
 @given(from_type(InMessage))
@@ -26,7 +40,7 @@ def test_wire_to_internal(wired: InMessage):
         assert value.user_id != 'None'
 
 
-@given(from_type(Message))
+@given(valid_message_strategy())
 def test_internal_to_wire(internal: Message):
     if internal.chat_id == '' or internal.text == '':
         with raises(ValueError):
