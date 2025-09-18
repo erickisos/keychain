@@ -27,11 +27,11 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_REGION }}
       - name: Generate requirements.txt file
-        run: uv export --format requirements.txt > requirements.txt
+        run: uv export --no-dev --format requirements.txt > requirements.txt
       - name: Create layer directory
         run: mkdir -p dist/python/
       - name: Install dependencies
-        run: pip install . -t dist/python/
+        run: uv pip install . --target dist/python/
       - run: sam build --use-container
       - run: |
           sam deploy --no-confirm-changeset \
