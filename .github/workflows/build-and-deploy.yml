@@ -11,26 +11,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
-      - name: Set up Python
-        uses: actions/setup-python@v6
+      - name: Set up Python and UV
+        uses: astral-sh/setup-uv@v6
         with:
-          python-version: 3.9
-      - name: Set up Poetry
-        uses: Gr1N/setup-poetry@v9
-      - name: Restoring cache
-        id: cache
-        uses: actions/cache@v4
-        with:
-          path: ~/.cache/pypoetry/virtualenvs
-          key: ${{ runner.os }}-poetry-${{ hashFiles('pyproject.toml') }}
+          version: latest
+          enable-cache: true
+          activate-environment: true
+          python-version: "3.13"
+      - name: Install Dependencies
+        run: uv sync --all-extras
       - uses: aws-actions/setup-sam@v2
       - uses: aws-actions/configure-aws-credentials@v5
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: us-east-1
+          aws-region: ${{ secrets.AWS_REGION }}
       - name: Generate requirements.txt file
-        run: poetry export -o requirements.txt
+        run: uv export --format requirements.txt > requirements.txt
       - name: Create layer directory
         run: mkdir -p dist/python/
       - name: Install dependencies

@@ -21,7 +21,7 @@ mock_config: Config = {
 @given(event=event_with_json_body(Update))
 @patch('keychain.components.telegram.requests.post')
 def test_webhook(mock_req, event: LambdaApiEvent):
-    """Test that no matter which event we receive, the answer is the same"""
+    """Test that no matter which event we receive, the answer is the same."""
     update = json.loads(event.get('body') or '{}')
     message = update.get('edited_message') or update.get('message')
     mock_req.return_value = from_dict({'result': message}, 200)
