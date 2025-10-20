@@ -48,7 +48,7 @@ wheels = [
 
 [[package]]
 name = "aws-sam-cli"
-version = "1.144.0"
+version = "1.145.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "aws-lambda-builders" },
@@ -75,14 +75,14 @@ dependencies = [
     { name = "tzlocal" },
     { name = "watchdog" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/6d/85/000b8a0851de8a24998b75048540d27bfe187b8f405f229e3fa998b16fc1/aws_sam_cli-1.144.0.tar.gz", hash = "sha256:1c87a7bcbfdf937fce13a74dc0931744f12b97a43c3c0915845f531199b33aca", size = 6318722, upload-time = "2025-09-11T02:36:06.206Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/19/79/c33c8d9f5544a6d8a190919dcff68a3ee38625b05ec6e4277b6bd614bf8e/aws_sam_cli-1.145.1.tar.gz", hash = "sha256:5799740d9e8c033986c9e66db35a4f2c5ae4bc0682302727147fdb0894ee05da", size = 6336891, upload-time = "2025-10-15T22:47:37.845Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/d9/9b/41ff0666ad2e288b7c1702d67055f8df67dcb62acd42ff104ac6623a8d2e/aws_sam_cli-1.144.0-py3-none-any.whl", hash = "sha256:afe2b4581243abf490b908365f08f9ae1458cae1b8101f41cc6e38cee061e9ed", size = 6607685, upload-time = "2025-09-11T02:36:03.938Z" },
+    { url = "https://files.pythonhosted.org/packages/34/9b/98865d7e600aa651d8016dbb6072bc5a04eedc403d672d61d4342420fe8d/aws_sam_cli-1.145.1-py3-none-any.whl", hash = "sha256:270fed2a53281e65b30084a33e42e0f2535e54e1c820254f84b06e28b679bb28", size = 6626116, upload-time = "2025-10-15T22:47:35.95Z" },
 ]
 
 [[package]]
 name = "aws-sam-translator"
-version = "1.100.0"
+version = "1.101.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "boto3" },
@@ -90,9 +90,9 @@ dependencies = [
     { name = "pydantic" },
     { name = "typing-extensions" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/0b/63/2f0ef6d6612a16e8eb293d4724d9cdd07b713677d66999dfc93e084ebc87/aws_sam_translator-1.100.0.tar.gz", hash = "sha256:be4fb7eef864c971eb305af09de8e4e0bfe98a4eca122a00c069f6346aa00410", size = 343314, upload-time = "2025-08-28T23:16:30.109Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/e8/7f/db344c656949fa286ff8a14ff2c64355b6ca0cb6ebaf260678041acb8d9c/aws_sam_translator-1.101.0.tar.gz", hash = "sha256:234c1ca29d47f2cd276858371d4a646bc5cdb0de1e07724721d9358d6de005aa", size = 343589, upload-time = "2025-10-10T18:15:45.457Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/92/af/eaeeb7f1f868a2f9578523a45de8685c1d7dfb81ae94b59cc4b3b5213e70/aws_sam_translator-1.100.0-py3-none-any.whl", hash = "sha256:643d24ab4c9c422fab19208528fdb97bbe3399735fdcc189a9af91f873b4f9e4", size = 401514, upload-time = "2025-08-28T23:16:28.251Z" },
+    { url = "https://files.pythonhosted.org/packages/e2/a6/b97d62695badf078366d3fdfbe4e5767064e2ed79cf19906b99f2ef07000/aws_sam_translator-1.101.0-py3-none-any.whl", hash = "sha256:a83f0c2e1712a7695446675faf93276518a690d75e190f861636d5326a3d2f30", size = 401737, upload-time = "2025-10-10T18:15:43.718Z" },
 ]
 
 [[package]]
@@ -145,15 +145,15 @@ wheels = [
 
 [[package]]
 name = "boto3-stubs"
-version = "1.40.26"
+version = "1.40.50"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "botocore-stubs" },
     { name = "types-s3transfer" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/47/a0/4efb14b0966b480381ea9dc69e285aa43265c26601d5d367f9142ca4fc38/boto3_stubs-1.40.26.tar.gz", hash = "sha256:f9f7538881edd07ebfab1bd7890af2bd0b829ebb16d931860845d448e4505a2d", size = 101034, upload-time = "2025-09-08T20:12:35.748Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/35/c8/06584145c4ccc80e3297a97874bfaa43e6b2fb9f8a69bcc38e29a1457bf5/boto3_stubs-1.40.50.tar.gz", hash = "sha256:29828adfcb8629b5e285468eb89610f1fc71f964ad0913de3049a0a9d5de0be1", size = 100836, upload-time = "2025-10-10T20:32:34.867Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/59/82/6864819c7951f5802af47af2bcd32ebfb4eb7bcbd70f97a399ec68d447c7/boto3_stubs-1.40.26-py3-none-any.whl", hash = "sha256:bd255236b300f75427a92eb8e8efb5dccf6b108ff6e21faf507fb3590d831722", size = 69771, upload-time = "2025-09-08T20:12:27.263Z" },
+    { url = "https://files.pythonhosted.org/packages/7b/69/f18c7135dc8a2b74e21b4a2375fa455e4d9e7e47f7838bc175d52005054a/boto3_stubs-1.40.50-py3-none-any.whl", hash = "sha256:01b9c67df62f26371a4a7473c616eece988a5305e7f7cb3fbc014d178685ac4e", size = 69689, upload-time = "2025-10-10T20:32:25.77Z" },
 ]
 
 [package.optional-dependencies]
@@ -291,7 +291,7 @@ wheels = [
 
 [[package]]
 name = "cfn-lint"
-version = "1.39.1"
+version = "1.40.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "aws-sam-translator" },
@@ -302,9 +302,9 @@ dependencies = [
     { name = "sympy" },
     { name = "typing-extensions" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/1f/a6/f61ded3fe3c6551e3cf1d310e3255e3546807e55ca637168461932dfe625/cfn_lint-1.39.1.tar.gz", hash = "sha256:ddad90025c72d7e31bb2d449e2444e5cfd3fe6d2bb30caa69f865aa17e60279f", size = 3250565, upload-time = "2025-08-26T18:50:47.554Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/cd/3e/0e653b305bf8f77d377943e7294176bdc4b1db9d29c989c1cc6255f7ac40/cfn_lint-1.40.2.tar.gz", hash = "sha256:5822b2c90f7f2646823a47db9df7a60c23df46bbac34b2081d8a0b3b806c91eb", size = 3352309, upload-time = "2025-10-14T17:59:48.146Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/f7/78/2172ef1950e6ecaf171968c354065278067f29b76fde8bb6caf72b477a2c/cfn_lint-1.39.1-py3-none-any.whl", hash = "sha256:1321dfce4a7e9b1a4c2e2aa7aae5f9055d94c5cd15705568da7ce1a4c26fd7bc", size = 5388959, upload-time = "2025-08-26T18:50:45.505Z" },
+    { url = "https://files.pythonhosted.org/packages/4c/8e/ec1a99f4441bd14569e59ba0e5bca150c807493bb9cb06feabc8ac2bbb5f/cfn_lint-1.40.2-py3-none-any.whl", hash = "sha256:fa44a3101bd8d7f644bc146b8a9e63d0fa2b64cd61c8a767e65c46920646277c", size = 5670475, upload-time = "2025-10-14T17:59:45.294Z" },
 ]
 
 [[package]]
@@ -1049,14 +1049,14 @@ wheels = [
 
 [[package]]
 name = "pyopenssl"
-version = "25.1.0"
+version = "25.3.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "cryptography" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/04/8c/cd89ad05804f8e3c17dea8f178c3f40eeab5694c30e0c9f5bcd49f576fc3/pyopenssl-25.1.0.tar.gz", hash = "sha256:8d031884482e0c67ee92bf9a4d8cceb08d92aba7136432ffb0703c5280fc205b", size = 179937, upload-time = "2025-05-17T16:28:31.31Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/80/be/97b83a464498a79103036bc74d1038df4a7ef0e402cfaf4d5e113fb14759/pyopenssl-25.3.0.tar.gz", hash = "sha256:c981cb0a3fd84e8602d7afc209522773b94c1c2446a3c710a75b06fe1beae329", size = 184073, upload-time = "2025-09-17T00:32:21.037Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/80/28/2659c02301b9500751f8d42f9a6632e1508aa5120de5e43042b8b30f8d5d/pyopenssl-25.1.0-py3-none-any.whl", hash = "sha256:2b11f239acc47ac2e5aca04fd7fa829800aeee22a2eb30d744572a157bd8a1ab", size = 56771, upload-time = "2025-05-17T16:28:29.197Z" },
+    { url = "https://files.pythonhosted.org/packages/d1/81/ef2b1dfd1862567d573a4fdbc9f969067621764fbb74338496840a1d2977/pyopenssl-25.3.0-py3-none-any.whl", hash = "sha256:1fda6fc034d5e3d179d39e59c1895c9faeaf40a79de5fc4cbbfbe0d36f4a77b6", size = 57268, upload-time = "2025-09-17T00:32:19.474Z" },
 ]
 
 [[package]]
@@ -1229,15 +1229,15 @@ wheels = [
 
 [[package]]
 name = "rich"
-version = "14.1.0"
+version = "14.2.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "markdown-it-py" },
     { name = "pygments" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/fe/75/af448d8e52bf1d8fa6a9d089ca6c07ff4453d86c65c145d0a300bb073b9b/rich-14.1.0.tar.gz", hash = "sha256:e497a48b844b0320d45007cdebfeaeed8db2a4f4bcf49f15e455cfc4af11eaa8", size = 224441, upload-time = "2025-07-25T07:32:58.125Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/fb/d2/8920e102050a0de7bfabeb4c4614a49248cf8d5d7a8d01885fbb24dc767a/rich-14.2.0.tar.gz", hash = "sha256:73ff50c7c0c1c77c8243079283f4edb376f0f6442433aecb8ce7e6d0b92d1fe4", size = 219990, upload-time = "2025-10-09T14:16:53.064Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/e3/30/3c4d035596d3cf444529e0b2953ad0466f6049528a879d27534700580395/rich-14.1.0-py3-none-any.whl", hash = "sha256:536f5f1785986d6dbdea3c75205c473f970777b4a0d6c6dd1b696aa05a3fa04f", size = 243368, upload-time = "2025-07-25T07:32:56.73Z" },
+    { url = "https://files.pythonhosted.org/packages/25/7a/b0178788f8dc6cafce37a212c99565fa1fe7872c70c6c9c1e1a372d9d88f/rich-14.2.0-py3-none-any.whl", hash = "sha256:76bc51fe2e57d2b1be1f96c524b890b816e334ab4c1e45888799bfaab0021edd", size = 243393, upload-time = "2025-10-09T14:16:51.245Z" },
 ]
 
 [[package]]
