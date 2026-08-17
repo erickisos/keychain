@@ -20,7 +20,7 @@ jobs:
           python-version: "3.13"
       - name: Install Dependencies
         run: uv sync --all-extras
-      - uses: aws-actions/setup-sam@v2
+      - uses: aws-actions/setup-sam@v3
       - uses: aws-actions/configure-aws-credentials@v5
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
