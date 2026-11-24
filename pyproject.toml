@@ -6,7 +6,7 @@ authors = [{ name = "Erick Isos", email = "erickisos653@gmail.com" }]
 requires-python = ">=3.13.0,<4"
 license = "GPL-3.0"
 dependencies = [
-    "pydantic>=2.11.7,<3",
+    "pydantic>=2.14.3,<3",
     "requests>=2.32.5,<3",
     "aws-xray-sdk>=2.14.0,<3",
 ]
